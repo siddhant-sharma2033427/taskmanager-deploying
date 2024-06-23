@@ -85,7 +85,7 @@ const Login = () => {
                 </form>
                 <Typography>
                     Don't you have an account?
-                    <Link href="/signup">
+                    <Link to="/signup">
                         Sign Up
                     </Link>
                 </Typography>

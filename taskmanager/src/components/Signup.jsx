@@ -132,7 +132,7 @@ const Login = () => {
                 </form>
                 <Typography>
                     Already have an account?
-                    <Link href="/login">
+                    <Link to="/login">
                         Login
                     </Link>
                 </Typography>
