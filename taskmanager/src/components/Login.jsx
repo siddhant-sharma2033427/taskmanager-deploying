@@ -32,7 +32,7 @@ const Login = () => {
         setShowPassword(!showPassword);
     };
 
-    const paperStyle = { padding: 20, height: '20vh', width: '280px', margin: '20px auto' };
+    const paperStyle = { padding: 20, height: '70vh', width: '280px', margin: '20px auto' };
     const avatarStyle = { backgroundColor: '#1bbd7e' };
     const btnstyle = { margin: '8px 0' };
     const textFieldStyle = { margin: '8px 0' };
@@ -85,7 +85,7 @@ const Login = () => {
                 </form>
                 <Typography>
                     Don't you have an account?
-                    <Link href="/Signup">
+                    <Link href="/signup">
                         Sign Up
                     </Link>
                 </Typography>

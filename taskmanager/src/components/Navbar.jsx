@@ -13,13 +13,13 @@ const Navbar = ({setAddTask}) => {
     return (
         <AppBar position="static">
             <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 , fontSize:"100px"}}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 , fontSize:"20px"}}>
                     TaskManager
                 </Typography>
-                <Button  variant="contained" onClick={handleAddTask} sx={{fontSize:"70px",marginRight:"10px"}}>
+                <Button  variant="contained" onClick={handleAddTask} sx={{fontSize:"20px",marginRight:"10px"}}>
                     Add Task
                 </Button>
-                <Button variant='contained' onClick={handleLogout} sx={{fontSize:"70px"}}>
+                <Button variant='contained' onClick={handleLogout} sx={{fontSize:"20px"}}>
                     Logout
                 </Button>
             </Toolbar>
