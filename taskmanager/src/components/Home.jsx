@@ -73,22 +73,22 @@ const Home = () => {
         tasks.map((task) => (
           <Grid item xs={12} md={6} lg={4} key={task._id}>
             <Paper style={paperStyle}>
-              <Typography variant="h1">
+              <Typography variant="h5">
                 {task.title}
               </Typography>
-              <Typography variant="h3">
+              <Typography variant="body1">
                 {task.description}
               </Typography>
-              <Typography variant="h3" color="textSecondary">
+              <Typography variant="body2" color="textSecondary">
                 Status: {task.status}
               </Typography>
-              <Typography variant="h3" color="textSecondary">
+              <Typography variant="body2" color="textSecondary">
                 Due Date: {new Date(task.dueDate).toLocaleDateString()}
               </Typography>
-              <Button variant="contained" color="primary" style={{ marginTop: 10, width: "20%", height: "10%", fontSize: "50px" }} onClick={() => handleEditClick(task)}>
+              <Button variant="contained" color="primary" style={{ marginTop: 10, }} onClick={() => handleEditClick(task)}>
                 Edit
               </Button>
-              <Button variant="contained" color="primary" style={{ marginTop: 10, backgroundColor: "red", marginLeft: 10, width: "20%", height: "10%", fontSize: "50px" }} onClick={() => handleDelete(task._id)}>
+              <Button variant="contained" color="primary" style={{ marginTop: 10, backgroundColor: "red", marginLeft: 10,  }} onClick={() => handleDelete(task._id)}>
                 Delete
               </Button>
             </Paper>
