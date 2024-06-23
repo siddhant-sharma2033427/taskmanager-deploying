@@ -14,7 +14,7 @@ const port = 5000;
 
 app.use(cors());
 app.use(express.json());
-app.use('/', Route);
+app.use('/api', Route);
 Connection();
 
 app.get("/", (req, res) => {
