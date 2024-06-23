@@ -10,18 +10,25 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000; // Use process.env.PORT for deployment environments
 
 app.use(cors());
 app.use(express.json());
-app.use('/api', Route);
+
+// Database connection
 Connection();
 
-app.get("/", (req, res) => {
-    app.use(express.static(path.resolve(__dirname, "taskmanager", "build")));
-    res.sendFile(path.resolve(__dirname, "taskmanager", "build", "index.html"));
+// API routes
+app.use('/api', Route);
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'taskmanager', 'build')));
+
+// The "catchall" handler: for any request that doesn't match one above, send back index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'taskmanager', 'build', 'index.html'));
 });
 
 app.listen(port, () => {
-    console.log(`iNotebook backend listening at http://localhost:${port}`);
+  console.log(`Task Manager backend listening at http://localhost:${port}`);
 });
