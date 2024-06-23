@@ -1,0 +1,24 @@
+{
+  "name": "baackend",
+  "version": "1.0.0",
+  "description": "A backend for a Task Management Application built with Node.js, Express.js, and MongoDB. It features user authentication using JWT and provides RESTful API endpoints for creating, reading, updating, and deleting tasks. The backend ensures secure and efficient task management with robust error handling and environment configuration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "type": "module",
+  "author": "Siddhant Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.3",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7"
+  }
+}
